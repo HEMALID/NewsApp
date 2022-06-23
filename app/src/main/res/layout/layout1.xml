@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cIv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/item"
+                android:src="@drawable/document_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginTop="15dp" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/all"
+                android:fontFamily="@font/rubik_bold"
+                app:layout_constraintEnd_toEndOf="@+id/cIv"
+                app:layout_constraintStart_toStartOf="@+id/cIv"
+                app:layout_constraintTop_toBottomOf="@+id/cIv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>
+
+

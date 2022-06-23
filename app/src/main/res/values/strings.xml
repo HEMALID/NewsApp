@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">News App</string>
+
+    <string name="inShorts">InShorts</string>
+    <string name="featured_st">Featured Stories</string>
+    <string name="read_now">Read Now</string>
+    <string name="bitcoin_sol">Bitcoin, Solana, Cardano and other top cryptocurrencies to watch out for on September 7.</string>
+    <string name="the_crypto_">The crypto fear and greed index is in the \u00E2\u0080\u0098extreme greed\u00E2\u0080\u0099 territory and the market reflects that sentiment.</string>
+    <string name="read_full_s">Read Full Story</string>
+    <string name="all">All</string>
+
+
+</resources>
