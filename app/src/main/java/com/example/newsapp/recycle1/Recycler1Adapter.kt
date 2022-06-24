@@ -15,14 +15,14 @@ class Recycler1Adapter(var context: Context,var mNews : newsAction):RecyclerView
         fun onClick(n: String)
     }
 
-    var selectedPosition = -1
+    var selectedPosition = 0
 
-    private val img = arrayOf(R.drawable.global,
-        R.drawable.document_text,
+    private val img = arrayOf(R.drawable.document_text,
+        R.drawable.global,
         R.drawable.flash,
-        R.drawable.flash,
+        R.drawable.cpu_charge,
         R.drawable.flash)
-    var text = arrayOf("All","Science","Startups","Technology","Business")
+    var text = arrayOf("All","World","Startups","Technology","Business")
 
     inner class ViewHolder(var binding: Layout1Binding) : RecyclerView.ViewHolder(binding.root)
 
@@ -37,7 +37,7 @@ class Recycler1Adapter(var context: Context,var mNews : newsAction):RecyclerView
         holder.binding.tvTitle.text = text[position]
         holder.itemView.setOnClickListener {
 
-            mNews.onClick(text[position])
+            mNews.onClick(text[position].toLowerCase())
             selectedPosition = position
             notifyDataSetChanged()
         }

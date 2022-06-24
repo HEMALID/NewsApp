@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         //Recycler 1
 
         var linearLayoutManager=LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -39,10 +38,8 @@ class MainActivity : AppCompatActivity() {
                 userList1.clear()
                 getRecycler2Data(n)
             }
-
         })
         binding.recycle1.adapter=adapter
-
 
         //Recycler 2
 

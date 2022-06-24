@@ -38,8 +38,8 @@ class NewsDetailsActivity : AppCompatActivity() {
 
         binding.tvDate.text=news!!.date
         binding.authorName.text=news!!.author
-        binding.bitcoinSol.text=news!!.content
-        binding.theCrypto.text=news!!.title
+        binding.bitcoinSol.text=news!!.title
+        binding.theCrypto.text=news!!.content
         Glide.with(this).load(news!!.imageUrl).into(rectangle_3)
 
         binding.readFullS.append("Read Full Story")
@@ -90,12 +90,22 @@ class NewsDetailsActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.rightMenu -> {
-                onClick()
+                shareApp()
+
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    private fun shareApp(){
+        val intent=Intent(Intent.ACTION_SEND)
+        intent.type="text/plain"
+        intent.putExtra(Intent.EXTRA_TEXT, arrayOf("news!!.readMoreUrl"))
+        intent.putExtra(Intent.EXTRA_TEXT, news!!.readMoreUrl )
+        startActivity(Intent.createChooser(intent, "Contact Us!"))
+    }
+
 
     private fun onClick() {
         val sendIntent=Intent()
